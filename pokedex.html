@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto Pokédex | Rafael Alves</title>
+
+    <link rel="stylesheet" href="css/pokedex.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html" class="voltar">
+            ← Voltar ao Portfólio
+        </a>
+
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <h1>Projeto Pokédex</h1>
+
+            <p>
+                Aplicação desenvolvida em Python utilizando a API pública da PokéAPI.
+            </p>
+
+        </section>
+
+        <!-- SOBRE -->
+
+        <section class="section">
+
+            <h2>Sobre o Projeto</h2>
+
+            <p>
+                A Pokédex permite buscar informações de Pokémons usando API,
+                visualizar habilidades, tipos e salvar favoritos em JSON.
+            </p>
+
+        </section>
+
+        <!-- TECNOLOGIAS -->
+
+        <section class="section">
+
+            <h2>Tecnologias Utilizadas</h2>
+
+            <div class="skills">
+
+                <div class="card">
+                    Python
+                </div>
+
+                <div class="card">
+                    API REST
+                </div>
+
+                <div class="card">
+                    JSON
+                </div>
+
+                <div class="card">
+                    Requests
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CÓDIGOS -->
+
+        <section class="section">
+
+            <h2>Código do Projeto</h2>
+
+            <!-- api.py -->
+
+            <div class="codigo">
+
+                <h3>api.py</h3>
+
+<pre><code>
+import requests
+import urllib3
+
+urllib3.disable_warnings(
+    urllib3.exceptions.InsecureRequestWarning
+)
+
+def buscar_pokemon_api(nome):
+
+    url = f"https://pokeapi.co/api/v2/pokemon/{nome.lower()}"
+
+    resposta = requests.get(url, verify=False)
+
+    if resposta.status_code == 200:
+
+        dados = resposta.json()
+
+        pokemon = {
+
+            "nome": dados["name"].title(),
+
+            "altura": dados["height"],
+
+            "peso": dados["weight"],
+
+            "tipos": [
+                tipo["type"]["name"]
+                for tipo in dados["types"]
+            ],
+
+            "habilidades": [
+                habilidade["ability"]["name"]
+                for habilidade in dados["abilities"]
+            ]
+        }
+
+        return pokemon
+
+    return None
+</code></pre>
+
+            </div>
+
+            <!-- main.py -->
+
+            <div class="codigo">
+
+                <h3>main.py</h3>
+
+<pre><code>
+from api import buscar_pokemon_api
+from favoritos import salvar_favorito, ver_favoritos
+from pokedex import listar_pokemon
+
+while True:
+
+    print("\n===== POKEDEX =====")
+    print("1 - Buscar Pokémon")
+    print("2 - Ver Favoritos")
+    print("3 - Sair")
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+
+        nome = input("\nDigite o nome do Pokémon: ")
+
+        pokemon = buscar_pokemon_api(nome)
+
+        if pokemon:
+
+            listar_pokemon(pokemon)
+
+            salvar = input(
+                "\nDeseja salvar nos favoritos? (S/N): "
+            )
+
+            if salvar.lower() == "s":
+
+                salvar_favorito(pokemon)
+
+    elif opcao == "2":
+
+        ver_favoritos()
+
+    elif opcao == "3":
+
+        print("\nEncerrando Pokédex...")
+        break
+
+    else:
+
+        print("\nOpção inválida!")
+</code></pre>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
