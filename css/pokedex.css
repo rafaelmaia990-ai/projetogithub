@@ -1,4 +1,7 @@
+/* ================================================= */
 /* RESET */
+/* REMOVE ESPAÇAMENTOS PADRÃO */
+/* ================================================= */
 
 * {
     margin: 0;
@@ -6,28 +9,37 @@
     box-sizing: border-box;
 }
 
+/* ================================================= */
 /* BODY */
+/* CONFIGURAÇÕES GERAIS */
+/* ================================================= */
+
 
 body {
-
+    /* FONTE */
     font-family: 'Inter', sans-serif;
-
+    /* COR DE FUNDO */
     background: #f5f5f5;
-
+    /* COR TEXTO */
     color: #333;
-
+    /* ESPAÇAMENTO ENTRE LINHAS */
     line-height: 1.6;
 }
 
+/* ================================================= */
 /* HEADER */
+/* TOPO */
+/* ================================================= */
 
 header {
-
+    /* COR */
     background: #5C4033;
-
+    /* ESPAÇAMENTO */
     padding: 2rem;
 }
-
+/* ================================================= */
+/* BOTÃO VOLTAR */
+/* ================================================= */
 .voltar {
 
     color: white;
@@ -39,24 +51,27 @@ header {
     font-weight: 600;
 }
 
+/* ================================================= */
 /* HERO */
+/* ÁREA PRINCIPAL */
+/* ================================================= */
 
 .hero {
-
+    /* ALTURA */
     min-height: 50vh;
-
+    /* ALTURA */
     display: flex;
-
+    /* EMPILHA */
     flex-direction: column;
-
+    /* CENTRALIZA */
     justify-content: center;
 
     align-items: center;
-
+    /* TEXTO CENTRAL */
     text-align: center;
 
     padding: 3rem;
-
+    /* FUNDO */
     background:
         linear-gradient(rgba(92,64,51,0.8),
         rgba(92,64,51,0.9)),
@@ -69,14 +84,16 @@ header {
 
     color: white;
 }
-
+/* ================================================= */
+/* TÍTULO */
+/* ================================================= */
 .hero h1 {
 
     font-size: 5rem;
 
     margin-bottom: 2rem;
 }
-
+/* TEXTO */
 .hero p {
 
     max-width: 700px;
@@ -84,7 +101,10 @@ header {
     font-size: 2rem;
 }
 
+/* ================================================= */
 /* SECTION */
+/* ESPAÇAMENTO DAS ÁREAS */
+/* ================================================= */
 
 .section {
 
@@ -100,7 +120,10 @@ header {
     color: #5C4033;
 }
 
-/* CARDS */
+/* ================================================= */
+/* SKILLS */
+/* ÁREA DOS CARDS */
+/* ================================================= */
 
 .skills {
 
@@ -110,7 +133,9 @@ header {
 
     gap: 2rem;
 }
-
+/* ================================================= */
+/* CARD */
+/* ================================================= */
 .card {
 
     background: white;
@@ -124,33 +149,41 @@ header {
     font-weight: 600;
 }
 
-/* CÓDIGO */
+/* ================================================= */
+/* BLOCO DE CÓDIGO */
+/* ================================================= */
 
 .codigo {
 
     margin-bottom: 4rem;
 }
-
+/* TÍTULO DO ARQUIVO */
 .codigo h3 {
 
     margin-bottom: 1rem;
 
     color: #5C4033;
 }
-
+/* ================================================= */
+/* pre */
+/* ÁREA DO CÓDIGO */
+/* ================================================= */
 pre {
-
+    /* FUNDO ESCURO */
     background: #1E1E1E;
-
+    /* COR TEXTO */
     color: #00FF88;
-
+    /* ESPAÇAMENTO */
     padding: 2rem;
-
+    /* ARREDONDAMENTO */
     border-radius: 12px;
-
+    /* SCROLL HORIZONTAL */
     overflow-x: auto;
 }
-
+/* ================================================= */
+/* code */
+/* TEXTO DO CÓDIGO */
+/* ================================================= */
 code {
 
     font-family: monospace;
@@ -158,25 +191,28 @@ code {
     font-size: 1.5rem;
 }
 
-/* RESPONSIVO */
+/* ================================================= */
+/* RESPONSIVIDADE */
+/* ================================================= */
+
 
 @media (max-width: 768px) {
-
+    /* TÍTULO MENOR */
     .hero h1 {
 
         font-size: 3.5rem;
     }
-
+    /* TEXTO MENOR */
     .hero p {
 
         font-size: 1.8rem;
     }
-
+    /* CARDS EM COLUNA */
     .skills {
 
         flex-direction: column;
     }
-
+    /* MENOS ESPAÇO */
     .section {
 
         padding: 5rem 5%;

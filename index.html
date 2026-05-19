@@ -1,29 +1,68 @@
+<!-- ================================================= -->
+<!-- DIZ AO NAVEGADOR QUE O SITE USA HTML5 -->
+<!-- ================================================= -->
 <!DOCTYPE html>
+<!-- ================================================= -->
+<!-- INÍCIO DO HTML -->
+<!-- lang="pt-br" DEFINE O IDIOMA -->
+<!-- ================================================= -->
 <html lang="pt-br">
 
 <head>
+    <!-- ================================================= -->
+    <!-- UTF-8 PERMITE ACENTOS E CARACTERES ESPECIAIS -->
+    <!-- ================================================= -->
     <meta charset="UTF-8">
+    <!-- ================================================= -->
+    <!-- RESPONSIVIDADE PARA CELULAR -->
+    <!-- width=device-width -->
+    <!-- ADAPTA AO TAMANHO DA TELA -->
+    <!-- ================================================= -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- ================================================= -->
+    <!-- TÍTULO DA ABA DO NAVEGADOR -->
+    <!-- ================================================= -->
     <title>Portfólio | Rafael Alves</title>
-
+    <!-- ================================================= -->
+    <!-- DESCRIÇÃO DO SITE -->
+    <!-- AJUDA O GOOGLE -->
+    <!-- ================================================= -->
     <meta name="description" content="Portfólio de Rafael Alves de Oliveira">
-
+     <!-- ================================================= -->
+    <!-- CONECTA O CSS -->
+    <!-- ================================================= -->
     <link rel="stylesheet" href="css/style.css">
-
+    <!-- ================================================= -->
+    <!-- IMPORTA FONTE DO GOOGLE -->
+    <!-- ================================================= -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
+     <!-- ================================================= -->
     <!-- HEADER -->
+    <!-- TOPO DO SITE -->
+    <!-- ================================================= -->
     <header>
-
+ <!-- ================================================= -->
+        <!-- LOGO -->
+        <!-- href="#" MANTÉM NA MESMA PÁGINA -->
+        <!-- ================================================= -->
         <a href="#" class="logo">Rafael</a>
-
+        <!-- ================================================= -->
+        <!-- MENU DE NAVEGAÇÃO -->
+        <!-- ================================================= -->
         <nav>
+            <!-- ================================================= -->
+            <!-- LISTA DO MENU -->
+            <!-- ================================================= -->
             <ul>
+                <!-- ================================================= -->
+                <!-- LINK INTERNO -->
+                <!-- #hero LEVA PARA O ID="hero" -->
+                <!-- ================================================= -->
                 <li><a href="#hero">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
@@ -33,35 +72,55 @@
         </nav>
 
     </header>
-
+    <!-- ================================================= -->
+    <!-- MAIN -->
+    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- ================================================= -->
     <main>
 
+        <!-- ================================================= -->
         <!-- HERO -->
+        <!-- PRIMEIRA TELA DO SITE -->
+        <!-- ================================================= -->
         <section id="hero" class="hero">
-
+            <!-- ================================================= -->
+            <!-- IMAGEM -->
+            <!-- alt É IMPORTANTE PARA ACESSIBILIDADE -->
+            <!-- ================================================= -->
             <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=500&h=400&fit=crop"
                 alt="Imagem Perfil">
-
+            <!-- ================================================= -->
+            <!-- TÍTULO PRINCIPAL -->
+            <!-- ================================================= -->
             <h1>Rafael Alves de Oliveira</h1>
-
+            <!-- ================================================= -->
+            <!-- PARÁGRAFO -->
+            <!-- ================================================= -->
             <p>
                 Estudante de TI no Senac aprendendo desenvolvimento web
                 com HTML, CSS e Python.
             </p>
-
+            <!-- ================================================= -->
+            <!-- BOTÃO -->
+            <!-- class="btn" -->
+            <!-- CSS VAI TRANSFORMAR EM BOTÃO -->
+            <!-- ================================================= -->
             <a href="#projetos" class="btn">
                 Ver Projetos
             </a>
 
         </section>
 
+        <!-- ================================================= -->
         <!-- SOBRE -->
+        <!-- ================================================= -->
         <section id="sobre" class="section">
-
+            <!-- TÍTULO -->
             <h2>Sobre Mim</h2>
-
+            <!-- DIV -->
+            <!-- CONTAINER PARA ORGANIZAR -->
             <div class="content">
-
+                <!-- TEXTO -->
                 <div class="texto">
 
                     <p>
@@ -82,13 +141,15 @@
 
         </section>
 
+        <!-- ================================================= -->
         <!-- HABILIDADES -->
+        <!-- ================================================= -->
         <section id="habilidades" class="section">
 
             <h2>Habilidades</h2>
-
+            <!-- ÁREA DOS CARDS -->
             <div class="skills">
-
+                <!-- CARD -->
                 <div class="skill-card">
                     <h3>HTML</h3>
 
@@ -96,7 +157,7 @@
                         Estruturação de páginas web modernas.
                     </p>
                 </div>
-
+                <!-- CARD -->
                 <div class="skill-card">
                     <h3>CSS</h3>
 
@@ -104,7 +165,7 @@
                         Criação de layouts responsivos e estilizados.
                     </p>
                 </div>
-
+                <!-- CARD -->
                 <div class="skill-card">
                     <h3>Python</h3>
 
@@ -117,18 +178,21 @@
 
         </section>
 
+        <!-- ================================================= -->
         <!-- PROJETOS -->
+        <!-- ================================================= -->
         <section id="projetos" class="section">
 
             <h2>Projetos</h2>
-
+            <!-- GRID -->
+            <!-- ÁREA DOS PROJETOS -->
             <div class="grid">
-
+                 <!-- CARD DO PROJETO -->
                 <div class="projeto-card">
-
+                    <!-- IMAGEM -->
                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop"
                         alt="Projeto">
-
+                     <!-- CONTEÚDO -->
                     <div class="card-content">
 
                         <h3>Site Catatau Lanches</h3>
@@ -153,6 +217,7 @@
                         <p>
                             Aplicação simples utilizando Python e API.
                         </p>
+                        <!-- LINK PARA OUTRA PÁGINA -->
                         <a href="pokedex.html" class="btn">
     Ver Projeto 
 </a>
@@ -164,7 +229,9 @@
 
         </section>
 
+        <!-- ================================================= -->
         <!-- CONTATO -->
+        <!-- ================================================= -->
         <section id="contato" class="section contato">
 
             <h2>Contato</h2>
@@ -175,7 +242,10 @@
 
     </main>
 
+    <!-- ================================================= -->
     <!-- FOOTER -->
+    <!-- RODAPÉ -->
+    <!-- ================================================= -->
     <footer>
 
         <p>
